@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  python-app:
+    build:
+      context: .
+      dockerfile: ./docker/python/Dockerfile
+    container_name: python-app-container
+    volumes:
+      - ./docker/python:/app
+
+  r-app:
+    build:
+      context: .
+      dockerfile: ./docker/r/Dockerfile
+    container_name: r-app-container
+    volumes:
+      - ./docker/r:/app
