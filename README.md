@@ -9,13 +9,14 @@ The project directory should be structured as follows:
 project-root/
 ├── docker-compose.yml
 ├── docker/
-│ ├── python/
-│ │ ├── Dockerfile
-│ │ ├── requirements.txt
-│ │ └── your_script.py
-│ ├── r/
-│ ├── Dockerfile
-│ └── your_script.R
+│   ├── python/
+│   │   ├── Dockerfile
+│   │   ├── requirements.txt
+│   │   └── your_script.py
+│   ├── r/
+│       ├── Dockerfile
+│       └── your_script.R
+
 
 
 - `docker-compose.yml`: Docker Compose configuration file.
@@ -67,6 +68,7 @@ To stop the running containers, use the following command:
 
 ```sh
 docker-compose down
+```
 
 This command will stop and remove the containers, but the images will remain cached.
 
@@ -74,10 +76,13 @@ Customizing the Environment
 
 Python Requirements: Add any Python dependencies to docker/python/requirements.txt.
 R Packages: Modify the RUN R -e "install.packages(...)" line in docker/r/Dockerfile to include additional R packages.
-Troubleshooting
+
+###Troubleshooting
+
 Ensure Docker and Docker Compose are installed and running properly on your system.
 Verify that the directory structure matches the expected layout.
-License
+
+###License
 This project is licensed under the MIT License.
 
 
